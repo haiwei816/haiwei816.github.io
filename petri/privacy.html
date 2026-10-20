@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f2c32">
+<meta name="description" content="《培养皿》（PETRI）Android 与 Windows 客户端隐私政策：不收集个人信息，存档仅保存在本地。">
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://haiwei816.github.io/petri/privacy.html">
+<title>《培养皿》（PETRI）隐私政策</title>
+<style>
+:root{--ink:#123b48;--soft:#315b66;--muted:#5f7880;--paper:#f7faf9;--line:rgba(18,59,72,.14);--accent:#14756f;--pale:#e8f3f0;--deep:#0f2c32;--shadow:0 22px 60px rgba(14,45,52,.12);--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei","PingFang SC",sans-serif;--mono:"SFMono-Regular",Consolas,Menlo,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);background:radial-gradient(circle at 8% 2%,rgba(150,210,199,.32),transparent 28rem),radial-gradient(circle at 95% 12%,rgba(230,216,177,.34),transparent 24rem),linear-gradient(180deg,#e8f2ef,#eef5f3 45%,#edf3f1);font-family:var(--sans);font-size:16px;line-height:1.76;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:linear-gradient(rgba(18,59,72,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(18,59,72,.045) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(#000,transparent 75%)}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{color:#0b5b56}
+a:focus-visible{outline:3px solid rgba(20,117,111,.42);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:9;padding:.7rem 1rem;color:#fff;background:var(--deep);border-radius:0 0 9px 9px;text-decoration:none}
+.skip:focus{top:0}
+.page{position:relative;width:min(1000px,calc(100% - 28px));margin:auto;padding:24px 0 42px}
+.hero{position:relative;overflow:hidden;padding:clamp(28px,5vw,54px);color:#edf8f5;background:radial-gradient(circle at 84% 16%,rgba(133,222,203,.17),transparent 20rem),linear-gradient(135deg,#0d292f,#143e43 58%,#0f3036);border:1px solid rgba(255,255,255,.12);border-radius:26px 26px 16px 16px;box-shadow:var(--shadow)}
+.hero::after{content:"";position:absolute;right:-7rem;top:-9rem;width:28rem;height:28rem;border:1px solid rgba(191,240,226,.18);border-radius:50%;box-shadow:0 0 0 32px rgba(191,240,226,.045),0 0 0 66px rgba(191,240,226,.03),inset 0 0 52px rgba(191,240,226,.08)}
+.eyebrow{position:relative;z-index:1;display:flex;align-items:center;gap:.6rem;margin:0 0 1.1rem;color:#a9dfd2;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.eyebrow::before{content:"";width:1.8rem;height:1px;background:currentColor;opacity:.72}
+h1{position:relative;z-index:1;margin:0;font-size:clamp(2rem,5.4vw,3.7rem);line-height:1.12;letter-spacing:-.035em;font-weight:650}
+.sub{position:relative;z-index:1;max-width:44rem;margin:1rem 0 0;color:#c8e2dc;font-size:clamp(.96rem,2vw,1.1rem)}
+.meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:.45rem 1.2rem;margin-top:1.5rem;color:#9fc5bc;font-size:.82rem}
+.meta span{display:inline-flex;align-items:center;gap:.42rem}
+.meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:#8ed6c5}
+.summary{position:relative;margin:-2px 16px 0;padding:21px 23px 18px;background:linear-gradient(#fff,#f6fbf9);border:1px solid var(--line);border-top:0;border-radius:0 0 26px 26px;box-shadow:0 16px 42px rgba(14,45,52,.07)}
+.summary p{margin:0;font-size:clamp(1rem,2vw,1.1rem);line-height:1.7}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:16px 0 0;padding:0;list-style:none}
+.facts li{min-height:4.4rem;padding:.72rem .82rem;color:var(--soft);background:#edf6f3;border:1px solid rgba(18,59,72,.09);border-radius:11px;font-size:.8rem;line-height:1.5}
+.facts strong{display:block;margin-bottom:.15rem;color:var(--accent);font-size:.72rem;letter-spacing:.06em}
+main{margin-top:24px;padding:clamp(23px,4.5vw,50px);background:rgba(255,255,255,.95);border:1px solid rgba(18,59,72,.11);border-radius:26px;box-shadow:var(--shadow)}
+.toc{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 2.2rem;padding:0 0 1.4rem;border-bottom:1px solid var(--line);list-style:none}
+.toc a{display:inline-block;padding:.3rem .62rem;color:var(--soft);background:#f2f7f5;border:1px solid rgba(18,59,72,.1);border-radius:99px;font-size:.76rem;text-decoration:none}
+.toc a:hover{color:var(--accent);background:#dff0ec;border-color:rgba(20,117,111,.24)}
+section{scroll-margin-top:22px}
+section+section{margin-top:2.5rem;padding-top:2.2rem;border-top:1px solid var(--line)}
+h2{display:flex;align-items:baseline;gap:.65rem;margin:0 0 .8rem;font-size:clamp(1.16rem,2.4vw,1.45rem);line-height:1.35;letter-spacing:-.015em}
+h2 .n{flex:0 0 auto;color:var(--accent);font-family:var(--mono);font-size:.72em;font-weight:600}
+h3{margin:1.35rem 0 .4rem;color:var(--soft);font-size:1rem;line-height:1.5}
+p{margin:.65rem 0}
+ul,ol{margin:.6rem 0;padding-left:1.3rem}
+li+li{margin-top:.35rem}
+li::marker{color:var(--accent)}
+strong{color:var(--ink)}
+code{padding:.08em .32em;color:#194b54;background:#edf5f2;border:1px solid rgba(18,59,72,.08);border-radius:5px;font-family:var(--mono);font-size:.86em;overflow-wrap:anywhere}
+.note{margin:1rem 0;padding:.9rem 1rem;color:var(--soft);background:linear-gradient(135deg,#eff8f5,#f7faf9);border:1px solid rgba(20,117,111,.18);border-left:4px solid var(--accent);border-radius:0 11px 11px 0;font-size:.92rem}
+.note p{margin:.15rem 0}
+.table-wrap{margin:.9rem 0 1.1rem;overflow-x:auto;border:1px solid var(--line);border-radius:14px;-webkit-overflow-scrolling:touch}
+table{width:100%;min-width:600px;border-collapse:collapse;background:#fff;font-size:.86rem;line-height:1.6}
+caption{padding:.75rem .9rem .65rem;color:var(--muted);background:#f8fbfa;border-bottom:1px solid var(--line);text-align:left;font-size:.78rem}
+th,td{padding:.68rem .85rem;vertical-align:top;text-align:left;border-bottom:1px solid rgba(18,59,72,.08)}
+th{color:var(--ink);background:#f1f7f5;font-size:.76rem;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even) td{background:rgba(241,247,245,.45)}
+.yes{color:var(--accent);font-weight:700}
+.no{color:var(--muted);font-weight:700}
+.steps{counter-reset:s;margin:.7rem 0;padding:0;list-style:none}
+.steps li{position:relative;padding-left:2rem}
+.steps li+li{margin-top:.68rem}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:.08rem;display:grid;width:1.4rem;height:1.4rem;place-items:center;color:#fff;background:var(--accent);border-radius:50%;font-family:var(--mono);font-size:.68rem;line-height:1}
+.contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:.9rem;overflow:hidden;background:var(--line);border:1px solid var(--line);border-radius:14px}
+.contact div{padding:.9rem 1rem;background:#fbfdfc}
+.contact .label{display:block;margin-bottom:.15rem;color:var(--muted);font-size:.74rem;letter-spacing:.05em}
+.contact .value{color:var(--ink);font-weight:600;overflow-wrap:anywhere}
+footer{padding:1.4rem 0 0;color:var(--muted);text-align:center;font-size:.77rem;line-height:1.65}
+footer p{margin:.25rem 0}
+.top{display:inline-block;margin-top:.7rem;color:var(--accent);text-decoration:none;font-weight:600}
+@media(max-width:820px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){body{font-size:15px}.page{width:calc(100% - 18px);padding-top:10px}.hero{padding:25px 19px 28px;border-radius:20px 20px 13px 13px}.hero::after{display:none}.summary{margin:0 7px;padding:17px 15px;border-radius:0 0 20px 20px}.facts{grid-template-columns:1fr}.facts li{min-height:0}main{padding:21px 16px 26px;border-radius:20px}.toc{margin-bottom:1.7rem}section+section{margin-top:2rem;padding-top:1.8rem}.contact{grid-template-columns:1fr}table{min-width:540px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{@page{margin:16mm}body{color:#000;background:#fff;font-size:10.5pt}body::before,.hero::after,.toc,.top{display:none!important}.page{width:100%;padding:0}.hero{padding:0 0 12pt;color:#000;background:none;border:0;border-bottom:2px solid #000;border-radius:0;box-shadow:none}.eyebrow,.sub,.meta{color:#333}.summary,main{margin:12pt 0 0;padding:0;border:0;box-shadow:none;background:none}.facts{grid-template-columns:repeat(2,1fr)}.facts li,.note,.table-wrap,.contact,.contact div{background:none}section+section{border-top:1px solid #bbb}a{color:#000;text-decoration:underline}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="page">
+<header class="hero">
+<p class="eyebrow">PETRI · 培养皿</p>
+<h1>隐私政策</h1>
+<p class="sub">适用于《培养皿》（英文名 PETRI；TapTap 商店名称：万物生长）的 Android 与 Windows 客户端。</p>
+<div class="meta"><span>生效日期：2026 年 10 月 21 日</span><span>版本：1.0</span><span>适用平台：Android / Windows</span></div>
+</header>
+<div class="summary">
+<p><strong>一句话说明：</strong>本游戏是纯单机游戏，不收集、不上传你的个人信息；游戏进度只保存在你的设备上。</p>
+<ul class="facts">
+<li><strong>不收集</strong>无需账号、手机号或实名信息</li>
+<li><strong>不联网</strong>Android 版本未申请网络权限</li>
+<li><strong>无第三方 SDK</strong>无广告、统计、推送或崩溃上报 SDK</li>
+<li><strong>本地保存</strong>Android 可清除数据；Windows 可删除存档目录</li>
+</ul>
+</div>
+<main id="main">
+<nav aria-label="目录"><ul class="toc">
+<li><a href="#scope">适用范围</a></li><li><a href="#collection">信息收集</a></li><li><a href="#local">本地数据</a></li><li><a href="#permissions">设备权限</a></li><li><a href="#third">第三方与平台</a></li><li><a href="#retention">存储与删除</a></li><li><a href="#rights">用户权利</a></li><li><a href="#minors">未成年人</a></li><li><a href="#changes">政策更新</a></li><li><a href="#contact">联系我们</a></li>
+</ul></nav>
+
+<section id="scope">
+<h2><span class="n">01</span>适用范围</h2>
+<p>本隐私政策由《培养皿》（PETRI）的开发者（以下简称“我们”）发布，适用于本游戏的 Android 客户端与 Windows 客户端，包括游戏本体、随游戏提供的本地功能及其后续更新版本。</p>
+<p>本政策仅说明游戏本身如何处理数据，不适用于 TapTap 客户端、TapTap 账号、商店下载、支付、评价或其他由 TapTap 运营方独立提供的平台服务。你通过 TapTap 使用相关平台服务时，应同时阅读 TapTap 的隐私政策。</p>
+<div class="note"><p><strong>平台说明：</strong>本游戏没有接入 TapTap 账号登录或 TapTap SDK，不会读取你的 TapTap 账号信息。TapTap 平台可能依其自身规则处理下载、账号或设备信息，该部分不由本游戏控制。</p></div>
+</section>
+
+<section id="collection">
+<h2><span class="n">02</span>我们是否收集个人信息</h2>
+<p><strong>游戏客户端不主动收集、上传、出售或向第三方提供你的个人信息。</strong>游戏没有账号系统，不需要注册，也不需要填写姓名、手机号、邮箱、身份证号、住址、生日或其他身份信息。你主动通过邮箱联系开发者时的信息处理方式，见“联系我们”。</p>
+<p>具体而言，本游戏不会收集或读取以下信息：</p>
+<ul>
+<li>姓名、手机号、电子邮箱、身份证件、地址等身份信息；</li>
+<li>通讯录、短信、通话记录、日历、照片或相册内容；</li>
+<li>精确或粗略位置、麦克风、摄像头、身体传感器数据；</li>
+<li>IMEI、MAC 地址、Android ID、广告标识符等设备标识；</li>
+<li>广告点击、页面浏览、游戏行为埋点、崩溃日志等统计分析数据；</li>
+<li>你在其他应用或网站中的账号、密码、支付或浏览记录。</li>
+</ul>
+<p>游戏运行过程中产生的技术信息仅用于本机启动、显示和性能调节，例如渲染缓存、启动日志和帧率状态。这些信息不会发送给我们或任何第三方，也不会与你的真实身份关联。</p>
+</section>
+
+<section id="local">
+<h2><span class="n">03</span>游戏会在本地保存哪些数据</h2>
+<p>为了让你能够继续游戏、保留设置和查看实验记录，游戏会在你的设备本地写入少量游戏数据。这些数据均保存在应用私有目录中，<strong>不会自动上传</strong>。</p>
+<div class="table-wrap"><table>
+<caption>本地数据类型与用途</caption>
+<thead><tr><th scope="col">数据类别</th><th scope="col">主要内容</th><th scope="col">用途</th><th scope="col">典型文件</th></tr></thead>
+<tbody>
+<tr><td>科研存档</td><td>游戏天数、培养皿与样本状态、细胞与生态模拟结果、评分、结局收集、经费与日程进度</td><td>保存和恢复游戏进度</td><td><code>research_campaign_v1.save</code><br><code>research_daily_v3.save</code></td></tr>
+<tr><td>设置与偏好</td><td>画质、音量、全屏、渲染缩放、教程完成状态、投影视角与场景布局</td><td>记住你的显示、音频和操作偏好</td><td><code>petri_settings.cfg</code><br><code>petri_tutorial.cfg</code><br><code>research-projection-view.cfg</code></td></tr>
+<tr><td>本地报告</td><td>你选择保存的实验报告、生态记录或分享卡，以及结算时生成的评分记录</td><td>供你在本机查看或自行保存</td><td><code>reports/*.json</code><br><code>reports/*.png</code><br><code>research-daily-scores.json</code><br><code>research-daily-scores.csv</code></td></tr>
+<tr><td>运行日志与缓存</td><td>启动状态、渲染着色器缓存、显示与性能诊断信息</td><td>排查启动问题、加快资源加载</td><td><code>startup.log</code><br><code>logs/</code><br><code>shader_cache/</code></td></tr>
+</tbody></table></div>
+<p>存档中的样本编号、随机种子和培养记录均为游戏内数据，不是你的真实身份标识，也不会与姓名、手机号、设备标识或任何账号关联。游戏使用校验值检测存档是否损坏；由于存档不离开设备，不存在向服务器传输或服务器端加密的环节。</p>
+<p>本地实验报告和分享卡只在你主动点击保存时生成。是否将文件发送给他人由你自行决定；默认生成的内容不包含个人信息、设备标识、账号信息或系统路径。</p>
+</section>
+
+<section id="permissions">
+<h2><span class="n">04</span>设备权限与系统功能</h2>
+<p>当前 Android 版本在安装包中<strong>未声明网络权限</strong>，也未申请定位、相机、麦克风、通讯录、短信、电话、日历、身体传感器或广泛存储权限。Windows 版本不包含联网功能。</p>
+<div class="table-wrap"><table>
+<caption>游戏实际使用的系统能力</caption>
+<thead><tr><th scope="col">权限或能力</th><th scope="col">是否使用</th><th scope="col">说明</th></tr></thead>
+<tbody>
+<tr><td>网络访问</td><td class="no">否</td><td>Android 未声明 <code>INTERNET</code> 权限；Windows 版不发起网络连接</td></tr>
+<tr><td>应用私有存储</td><td class="yes">是</td><td>仅读写游戏自己的存档、设置、报告与缓存，不扫描你的其他文件</td></tr>
+<tr><td>音频播放</td><td class="yes">是</td><td>播放随游戏分发的本地音乐和音效</td></tr>
+<tr><td>键盘、鼠标与触摸输入</td><td class="yes">是</td><td>用于游戏操作、全屏切换和界面交互</td></tr>
+<tr><td>剪贴板</td><td class="yes">仅写入</td><td>仅在你点击“复制样本编号”等按钮时写入；游戏不读取剪贴板内容</td></tr>
+<tr><td>相机、麦克风、位置</td><td class="no">否</td><td>不申请、不访问</td></tr>
+<tr><td>通讯录、短信、电话、日历</td><td class="no">否</td><td>不申请、不访问</td></tr>
+<tr><td>相册与广泛文件访问</td><td class="no">否</td><td>不申请广泛存储权限，不读取或上传你的照片、文档</td></tr>
+</tbody></table></div>
+<p>Android 版本已关闭系统的应用数据自动备份选项。游戏不会在后台录音、定位、读取通知或扫描其他应用。</p>
+</section>
+
+<section id="third">
+<h2><span class="n">05</span>第三方 SDK、组件与平台服务</h2>
+<p><strong>本游戏未接入广告、统计分析、账号登录、支付、推送、社交分享或崩溃上报类第三方 SDK。</strong></p>
+<div class="table-wrap"><table>
+<caption>第三方服务接入情况</caption>
+<thead><tr><th scope="col">类型</th><th scope="col">是否接入</th><th scope="col">说明</th></tr></thead>
+<tbody>
+<tr><td>账号与登录</td><td class="no">否</td><td>无账号系统，无第三方登录</td></tr>
+<tr><td>广告</td><td class="no">否</td><td>无开屏、横幅、插屏、激励视频或广告 SDK</td></tr>
+<tr><td>统计与埋点</td><td class="no">否</td><td>无行为统计、流量分析或用户画像 SDK</td></tr>
+<tr><td>崩溃上报</td><td class="no">否</td><td>无 Crashlytics、Sentry 等崩溃收集服务</td></tr>
+<tr><td>推送</td><td class="no">否</td><td>不请求通知权限，不发送推送</td></tr>
+<tr><td>支付</td><td class="no">否</td><td>游戏内无充值、内购或付费项目</td></tr>
+<tr><td>社交分享</td><td class="no">否</td><td>不自动发布或上传内容；实验卡仅保存在本地，是否转发由你决定</td></tr>
+</tbody></table></div>
+<p>游戏使用 Godot Engine 及若干开源字体、音频素材。这些组件随安装包在本地运行，不包含向开发者或第三方回传数据的遥测功能，也不属于会收集个人信息的第三方 SDK。相关开源许可证随游戏或项目文件提供。</p>
+<div class="note"><p><strong>TapTap 平台服务：</strong>当你通过 TapTap 下载、安装、启动游戏或使用 TapTap 账号、支付、评价等功能时，TapTap 运营方可能依其隐私政策处理相关信息。该处理独立于本游戏，我们不会从游戏内读取或上传你的 TapTap 账号信息。</p></div>
+</section>
+
+<section id="retention">
+<h2><span class="n">06</span>数据的存储、保留与删除</h2>
+<h3>存储位置与保留期限</h3>
+<p>游戏数据仅保存在你的设备本地。我们没有为游戏建立用于收集或存储玩家个人信息的服务器，因此不存在服务器端副本，也不需要向开发者申请删除服务器数据。游戏不会向第三方共享、转让、公开披露或跨境传输玩家个人信息。本地存档与设置会保留到你主动清除；缓存和日志可能在运行过程中被覆盖或清理。</p>
+<ul>
+<li><strong>Android：</strong>数据位于应用私有存储目录，通常不可被其他应用直接读取。</li>
+<li><strong>Windows：</strong>数据位于当前系统用户的应用数据目录 <code>%APPDATA%\Godot\app_userdata\PETRI</code>。</li>
+</ul>
+<h3>如何删除 Android 本地数据</h3>
+<ol class="steps">
+<li>打开设备的“设置”，进入“应用”或“应用管理”。</li>
+<li>找到本游戏（名称为 <strong>PETRI</strong> 或 <strong>万物生长</strong>，以商店显示名称为准）。</li>
+<li>进入“存储”，选择“清除数据”或“清除存储”。这会删除存档、设置、教程进度、报告、日志和缓存。</li>
+<li>或者直接卸载游戏。由于 Android 自动备份已关闭，卸载后应用私有目录中的数据会被删除。</li>
+</ol>
+<p>不同手机厂商的设置菜单名称可能略有差异；若找不到“清除数据”，可直接卸载游戏。删除后数据不可恢复，如需保留实验记录，请先自行备份。</p>
+<h3>如何删除 Windows 本地数据</h3>
+<p><strong>Windows 版删除或卸载游戏程序后，存档目录可能仍然保留。</strong>如需删除游戏数据，请按以下步骤操作：</p>
+<ol class="steps">
+<li>先退出游戏。</li>
+<li>按 <code>Win + R</code>，输入 <code>%APPDATA%\Godot\app_userdata\PETRI</code> 并回车。</li>
+<li>删除该文件夹。该操作会一并删除存档、设置、教程进度、报告、日志和缓存。</li>
+<li>如需彻底移除游戏，再删除游戏的安装目录。若你曾把实验卡另存到其他位置，请自行删除那些副本。</li>
+</ol>
+<p>删除本地数据不需要登录账号，也不需要联系开发者。若你希望确认删除范围或对本政策有疑问，可通过下方联系方式与我们联系。</p>
+</section>
+
+<section id="rights">
+<h2><span class="n">07</span>你的权利</h2>
+<p>由于本游戏不在服务器端收集或保存你的个人信息，你对游戏数据享有直接的控制权：</p>
+<ul>
+<li><strong>查询与复制：</strong>你可以直接查看本地存档、设置和报告文件，或使用游戏内的报告/导出功能。</li>
+<li><strong>更正：</strong>你可以通过游戏内设置调整偏好，或删除本地存档后重新开始。</li>
+<li><strong>删除：</strong>你可以按上一节对应平台的方法清除本地数据；Windows 需单独删除存档目录。</li>
+<li><strong>撤回同意：</strong>游戏不收集个人信息，因此不存在需要撤回的个人信息处理授权；你随时可以停止使用并删除本地数据。</li>
+<li><strong>投诉与咨询：</strong>你可以通过下方邮箱联系我们，我们会在收到有效请求后 15 个工作日内回复。</li>
+</ul>
+<p>我们不会因你查询、删除数据或提出隐私问题而拒绝提供游戏服务或对你进行差别对待。</p>
+</section>
+
+<section id="minors">
+<h2><span class="n">08</span>未成年人保护</h2>
+<p>本游戏为单机科研题材游戏，不面向儿童收集个人信息。由于游戏没有账号系统，也不收集姓名、联系方式、位置、照片等信息，我们不会明知收集未满 14 周岁儿童的个人信息。</p>
+<p>未成年人使用本游戏时，建议在监护人的指导和陪同下进行。若监护人认为游戏存在与未成年人个人信息相关的问题，可通过下方联系方式与我们联系，我们会及时核实并处理。</p>
+</section>
+
+<section id="changes">
+<h2><span class="n">09</span>本政策的更新</h2>
+<p>我们可能因游戏功能、平台要求或法律法规变化而更新本政策。更新后的政策会在本页面发布，并同步修改页面顶部的生效日期和版本号。</p>
+<p>如果未来版本新增联网、账号、广告、统计分析、支付或其他可能涉及个人信息的功能，我们会先更新本政策，依法取得必要的同意，并在游戏更新说明或 TapTap 商店页面中提示，不会在未告知的情况下开始收集信息。</p>
+<p>你可以在本页随时查看当前有效版本；如需了解历史版本，可通过下方邮箱联系我们。</p>
+</section>
+
+<section id="contact">
+<h2><span class="n">10</span>联系我们</h2>
+<p>如果你对本政策、游戏的数据处理方式或本地数据删除有任何疑问、意见或请求，请通过以下方式联系开发者：</p>
+<div class="contact">
+<div><span class="label">开发者 / 运营者</span><span class="value">海崴（haiwei816）</span></div>
+<div><span class="label">联系邮箱</span><span class="value"><a href="mailto:813014553@qq.com">813014553@qq.com</a></span></div>
+<div><span class="label">GitHub</span><span class="value"><a href="https://github.com/haiwei816" rel="noopener noreferrer">github.com/haiwei816</a></span></div>
+<div><span class="label">回复时限</span><span class="value">收到有效请求后 15 个工作日内</span></div>
+</div>
+<p>联系时请注明“《培养皿》隐私政策”。为保护你的安全，请勿在邮件中发送身份证号、账号密码、支付信息等不必要的敏感信息；我们也不会主动向你索取这些信息。</p>
+<p>如果你主动发送邮件，我们会收到你的发件邮箱及你自愿提供的邮件内容、截图或日志，仅用于回复咨询、处理隐私请求和排查你报告的问题，不用于广告或用户画像。这不属于游戏自动收集。相关邮件由所用邮箱服务商存储；除法律要求保留或尚有争议需处理的情形外，我们会在请求处理完毕后 90 天内删除所持有的相关邮件与附件副本。你也可以通过同一邮箱请求提前删除。</p>
+</section>
+</main>
+<footer>
+<p>本页面为静态 HTML，不设置 Cookie，不加载第三方统计、广告或追踪脚本。</p>
+<p>本政策网页托管于 GitHub Pages。访问网页时，GitHub 会为安全目的记录访问者 IP 地址，具体见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub 隐私声明</a>。该网页访问处理与离线游戏运行相互独立。</p>
+<p>《培养皿》（PETRI）· 隐私政策 v1.0 · 最后更新：2026 年 10 月 21 日</p>
+<a class="top" href="#main">返回正文顶部</a>
+</footer>
+</div>
+</body>
+</html>
